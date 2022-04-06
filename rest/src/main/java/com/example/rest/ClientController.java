@@ -1,22 +1,31 @@
 package com.example.rest;
 
+import com.example.model.DTO.ListResponseDTO;
+import com.example.service.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.List;
+
+@RestController
 public class ClientController {
 
+    private ClientService clientService;
 
-    @GetMapping("/insured")
-    public ResponseEntity getInsured(){
-
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
     }
 
-    @PostMapping("/isnured")
+    @GetMapping("/insured")
+    public ResponseEntity<List<ListResponseDTO>> getInsured(){
+        return clientService.getAllClients();
+    }
+
+    @PostMapping("/insured")
     public ResponseEntity addClient() {
 
 
@@ -25,6 +34,7 @@ public class ClientController {
 
     @GetMapping("/insured/{id}")
     public ResponseEntity getDetailedView() {
+
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }

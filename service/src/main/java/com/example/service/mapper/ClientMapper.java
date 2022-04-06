@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface ClientMapper {
 
-    ListResponseDTO listResponseDTO(Client client);
+    ListResponseDTO clientToListResponseDTO(Client client);
 
 
 }
