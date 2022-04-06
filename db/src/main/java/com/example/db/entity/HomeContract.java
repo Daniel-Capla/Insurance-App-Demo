@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 @AllArgsConstructor
@@ -15,10 +16,13 @@ import javax.persistence.Id;
 public class HomeContract extends Contract {
 
     @Id
-    Long id;
-    HomeType homeType;
-    int price;
+    private Long id;
+    private HomeType homeType;
+    private int price;
     //Address
+
+    @ManyToOne
+    private Client client;
 
 
 

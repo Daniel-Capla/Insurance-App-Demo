@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 @AllArgsConstructor
@@ -14,11 +15,13 @@ import javax.persistence.Id;
 public class TripContract extends Contract {
 
     @Id
-    Long id;
-    String startDate;
-    String endDate;
-    boolean liability;
-    boolean injury;
+    private Long id;
+    private String startDate;
+    private String endDate;
+    private boolean liability;
+    private boolean injury;
 
+    @ManyToOne
+    private Client client;
 
 }

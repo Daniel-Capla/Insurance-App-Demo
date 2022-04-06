@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 @AllArgsConstructor
@@ -13,5 +14,8 @@ import javax.persistence.Id;
 @Setter
 public class MailingAddress extends Address {
     @Id
-    Long id;
+    private Long id;
+
+    @OneToOne
+    private Client client;
 }
