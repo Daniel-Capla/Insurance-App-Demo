@@ -1,7 +1,7 @@
 package com.example.db.entity;
 
-import com.example.model.Contract;
-import com.example.model.HomeType;
+import com.example.db.parententity.Contract;
+import com.example.db.parententity.HomeType;
 import lombok.*;
 
 import javax.persistence.Entity;

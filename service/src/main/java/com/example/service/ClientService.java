@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.db.entity.Client;
 import com.example.db.repository.ClientRepository;
+import com.example.model.DTO.DetailedViewResponseDTO;
 import com.example.model.DTO.ListResponseDTO;
 import com.example.service.mapper.ClientMapper;
 import org.springframework.http.ResponseEntity;
@@ -30,8 +31,14 @@ public class ClientService {
             ListResponseDTO listResponseDTO = clientMapper.clientToListResponseDTO(client);
             clientListWithoutContractDetails.add(listResponseDTO);
         }
-
         return ResponseEntity.status(200).body(clientListWithoutContractDetails);
+    }
+
+    public ResponseEntity<DetailedViewResponseDTO> getDetailedCustomerView(Long id){
+       Client clientInDB = clientRepository.getById(id);
+       DetailedViewResponseDTO detailedViewResponseDTO = clientMapper.clientToDetailedViewResponseDTO(clientInDB);
+
+       return ResponseEntity.status(200).body(detailedViewResponseDTO);
     }
 
 

@@ -1,6 +1,6 @@
 package com.example.db.entity;
 
-import com.example.model.Contract;
+import com.example.db.parententity.Contract;
 import lombok.*;
 
 import javax.persistence.Entity;

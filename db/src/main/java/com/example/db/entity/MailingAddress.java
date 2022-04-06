@@ -1,6 +1,6 @@
 package com.example.db.entity;
 
-import com.example.model.Address;
+import com.example.db.parententity.Address;
 import lombok.*;
 
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.db.parententity;
 
 public enum HomeType {
 

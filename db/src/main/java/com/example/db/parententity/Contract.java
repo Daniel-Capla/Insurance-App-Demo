@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.db.parententity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
