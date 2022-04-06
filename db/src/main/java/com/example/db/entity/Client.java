@@ -23,7 +23,7 @@ public class Client {
     //MailingAddress
     //HomeContract
     //TripContract
-    
+
 
 
 }
