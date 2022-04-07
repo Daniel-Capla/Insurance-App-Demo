@@ -19,7 +19,7 @@ public class ClientController {
     }
 
     @GetMapping("/insured")
-    public ResponseEntity<List<ListResponseDTO>> getInsured(){
+    public ResponseEntity<List<ListResponseDTO>> getInsured() {
         return clientService.getAllClients();
     }
 
@@ -32,6 +32,4 @@ public class ClientController {
     public ResponseEntity<DetailedViewResponseDTO> getDetailedView(@PathVariable Long id) {
         return clientService.getDetailedCustomerView(id);
     }
-
-
 }

@@ -6,6 +6,5 @@ import java.util.Date;
 
 @MappedSuperclass
 public class Contract {
-
-    private String timeStamp = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+    private String creationDate = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
 }
