@@ -5,14 +5,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.MappedSuperclass;
 
+@MappedSuperclass
 @AllArgsConstructor
 @NoArgsConstructor
-@MappedSuperclass
 public class Address {
 
-private int zipCode;
-private String city;
-private String streetName;
-private byte houseNumber;
-
+    private int zipCode;
+    private String city;
+    private String streetName;
+    private byte houseNumber;
 }

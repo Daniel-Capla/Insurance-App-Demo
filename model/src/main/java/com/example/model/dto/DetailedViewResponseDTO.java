@@ -4,8 +4,6 @@ import com.example.db.entity.MailingAddress;
 import com.example.db.entity.OfficialAddress;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 public class DetailedViewResponseDTO {
 
@@ -14,6 +12,4 @@ public class DetailedViewResponseDTO {
     private String dateOfBirth;
     private OfficialAddress officialAddress;
     private MailingAddress mailingAddress;
-    private List<OfficialAddress> officialAddressList;
-    private List<MailingAddress> mailingAddressList;
 }

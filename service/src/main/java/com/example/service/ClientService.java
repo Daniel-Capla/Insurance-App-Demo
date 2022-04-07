@@ -37,7 +37,6 @@ public class ClientService {
     public ResponseEntity<DetailedViewResponseDTO> getDetailedCustomerView(Long id){
        Client clientInDB = clientRepository.getById(id);
        DetailedViewResponseDTO detailedViewResponseDTO = clientMapper.clientToDetailedViewResponseDTO(clientInDB);
-
        return ResponseEntity.status(200).body(detailedViewResponseDTO);
     }
 
