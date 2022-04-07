@@ -27,8 +27,7 @@ public class ClientService {
         List<Client> clientList = clientRepository.findAll();
         List<ListResponseDTO> clientListWithoutContractDetails = new ArrayList<>();
 
-        for (Client client :
-                clientList) {
+        for (Client client : clientList) {
             ListResponseDTO listResponseDTO = clientMapper.clientToListResponseDTO(client);
             clientListWithoutContractDetails.add(listResponseDTO);
         }
@@ -43,10 +42,13 @@ public class ClientService {
     }
 
     public ResponseEntity<Long> addNewClient(ClientDTO clientDTO) {
-        
-
-        return  null;
+        Client newClientToAdd = clientMapper.clientDTOtoClient(clientDTO);
+        clientRepository.save(newClientToAdd);
+        return ResponseEntity.status(200).body(findClientID(newClientToAdd));
     }
 
-
+    public Long findClientID(Client client) {
+        Client clientInDB = clientRepository.findClientByNameAndSurname(client.getName(), client.getSurname());
+        return clientInDB.getId();
+    }
 }

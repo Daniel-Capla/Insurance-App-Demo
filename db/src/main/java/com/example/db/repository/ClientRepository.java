@@ -10,4 +10,5 @@ import java.util.List;
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
     Client getById(Long id);
+    Client findClientByNameAndSurname(String name, String surname);
 }
