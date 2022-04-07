@@ -1,6 +1,6 @@
 package com.example.rest;
 
-import com.example.model.DTO.ListResponseDTO;
+import com.example.model.dto.ListResponseDTO;
 import com.example.service.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

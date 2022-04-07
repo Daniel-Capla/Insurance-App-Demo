@@ -2,8 +2,8 @@ package com.example.service;
 
 import com.example.db.entity.Client;
 import com.example.db.repository.ClientRepository;
-import com.example.model.DTO.DetailedViewResponseDTO;
-import com.example.model.DTO.ListResponseDTO;
+import com.example.model.dto.DetailedViewResponseDTO;
+import com.example.model.dto.ListResponseDTO;
 import com.example.service.mapper.ClientMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
