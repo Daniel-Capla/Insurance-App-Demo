@@ -23,7 +23,7 @@ public class ClientService {
     }
 
     public ResponseEntity<List<ListResponseDTO>> getAllClients() {
-        List<Client> clientList = clientRepository.getAll();
+        List<Client> clientList = clientRepository.findAll();
         List<ListResponseDTO> clientListWithoutContractDetails = new ArrayList<>();
 
         for (Client client :
@@ -40,6 +40,8 @@ public class ClientService {
 
        return ResponseEntity.status(200).body(detailedViewResponseDTO);
     }
+
+
 
 
 }

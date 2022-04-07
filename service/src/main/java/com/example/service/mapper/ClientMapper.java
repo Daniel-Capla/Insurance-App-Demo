@@ -5,7 +5,7 @@ import com.example.model.DTO.DetailedViewResponseDTO;
 import com.example.model.DTO.ListResponseDTO;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface ClientMapper {
 
     ListResponseDTO clientToListResponseDTO(Client client);
