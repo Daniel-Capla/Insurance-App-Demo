@@ -32,6 +32,13 @@ public class Client {
     @OneToMany(mappedBy = "client")
     private List<TripContract> tripContracts = new ArrayList<>();
 
-
-
+    public Client(String name, String surname, String dateOfBirth, OfficialAddress officialAddress, MailingAddress mailingAddress, List<HomeContract> homeContracts, List<TripContract> tripContracts) {
+        this.name = name;
+        this.surname = surname;
+        this.dateOfBirth = dateOfBirth;
+        this.officialAddress = officialAddress;
+        this.mailingAddress = mailingAddress;
+        this.homeContracts = homeContracts;
+        this.tripContracts = tripContracts;
+    }
 }

@@ -1,10 +1,15 @@
 package com.example.db.parententity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
 public class Address {
 
 public int zipCode;
-private String city;
-private String streetName;
-private byte houseNumber;
+public String city;
+public String streetName;
+public byte houseNumber;
 
 }

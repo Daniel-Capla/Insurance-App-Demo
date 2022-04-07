@@ -1,6 +1,8 @@
 package com.example.boot;
 
+import com.example.db.entity.Client;
 import com.example.db.entity.MailingAddress;
+import com.example.db.entity.OfficialAddress;
 import com.example.db.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -35,6 +37,13 @@ public class BootApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        Client client1 = new Client("Client1","Client1 surname","1.1.2020",null,null,null,null)
+
+        OfficialAddress officialAddress = new OfficialAddress(85105,"Bratislava","Jegeho", (byte) 12);
+        OfficialAddress officialAddress2 = new OfficialAddress(75757,"Senec","Bratislavska", (byte) 16);
+        MailingAddress mailingAddress = new MailingAddress(82108,"Kosice", "Hlavna", (byte)3);
+
 
 
 

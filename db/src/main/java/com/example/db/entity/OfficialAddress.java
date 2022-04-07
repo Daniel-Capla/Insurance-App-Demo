@@ -6,8 +6,6 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 public class OfficialAddress extends Address {
@@ -17,4 +15,11 @@ public class OfficialAddress extends Address {
 
     @OneToOne
     private Client client;
+
+    public OfficialAddress() {
+    }
+
+    public OfficialAddress(int zipCode, String city, String streetName, byte houseNumber) {
+        super(zipCode, city, streetName, houseNumber);
+    }
 }
