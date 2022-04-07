@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.db.entity.Client;
 import com.example.db.repository.ClientRepository;
+import com.example.model.dto.ClientDTO;
 import com.example.model.dto.DetailedViewResponseDTO;
 import com.example.model.dto.ListResponseDTO;
 import com.example.service.mapper.ClientMapper;
@@ -41,7 +42,11 @@ public class ClientService {
        return ResponseEntity.status(200).body(detailedViewResponseDTO);
     }
 
+    public ResponseEntity<Long> addNewClient(ClientDTO clientDTO) {
+        
 
+        return  null;
+    }
 
 
 }

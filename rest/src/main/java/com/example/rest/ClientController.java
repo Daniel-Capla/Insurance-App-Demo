@@ -1,5 +1,6 @@
 package com.example.rest;
 
+import com.example.model.dto.ClientDTO;
 import com.example.model.dto.ListResponseDTO;
 import com.example.service.ClientService;
 import org.springframework.http.HttpStatus;
@@ -23,9 +24,8 @@ public class ClientController {
     }
 
     @PostMapping("/insured")
-    public ResponseEntity addClient() {
-
-
+    public ResponseEntity addClient(@RequestBody ClientDTO clientDTO) {
+        clientService.addNewClient(clientDTO);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
