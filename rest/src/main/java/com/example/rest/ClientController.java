@@ -1,9 +1,9 @@
 package com.example.rest;
 
 import com.example.model.dto.ClientDTO;
+import com.example.model.dto.DetailedViewResponseDTO;
 import com.example.model.dto.ListResponseDTO;
 import com.example.service.ClientService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,15 +24,13 @@ public class ClientController {
     }
 
     @PostMapping("/insured")
-    public ResponseEntity addClient(@RequestBody ClientDTO clientDTO) {
-        clientService.addNewClient(clientDTO);
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public ResponseEntity<Long> addClient(@RequestBody ClientDTO clientDTO) {
+        return clientService.addNewClient(clientDTO);
     }
 
     @GetMapping("/insured/{id}")
-    public ResponseEntity getDetailedView(@PathVariable Long id) {
-        clientService.getDetailedCustomerView(id);
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public ResponseEntity<DetailedViewResponseDTO> getDetailedView(@PathVariable Long id) {
+        return clientService.getDetailedCustomerView(id);
     }
 
 

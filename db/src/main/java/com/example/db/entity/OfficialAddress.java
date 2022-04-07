@@ -3,9 +3,7 @@ package com.example.db.entity;
 import com.example.db.parententity.Address;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -14,6 +12,7 @@ import javax.persistence.OneToOne;
 @Setter
 public class OfficialAddress extends Address {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToOne

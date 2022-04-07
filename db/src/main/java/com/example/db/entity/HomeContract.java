@@ -4,9 +4,7 @@ import com.example.db.parententity.Contract;
 import com.example.db.parententity.HomeType;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -16,6 +14,7 @@ import javax.persistence.ManyToOne;
 public class HomeContract extends Contract {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private HomeType homeType;
     private int price;

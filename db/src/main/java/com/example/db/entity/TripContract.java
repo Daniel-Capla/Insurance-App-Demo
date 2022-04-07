@@ -3,9 +3,7 @@ package com.example.db.entity;
 import com.example.db.parententity.Contract;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -15,6 +13,7 @@ import javax.persistence.ManyToOne;
 public class TripContract extends Contract {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String startDate;
     private String endDate;
