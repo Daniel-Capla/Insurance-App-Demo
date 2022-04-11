@@ -1,6 +1,7 @@
 package com.example.boot;
 
 import com.example.db.entity.Client;
+import com.example.db.entity.HomeContract;
 import com.example.db.entity.MailingAddress;
 import com.example.db.entity.OfficialAddress;
 import com.example.db.repository.*;
@@ -44,6 +45,8 @@ public class BootApplication implements CommandLineRunner {
         OfficialAddress officialAddress = new OfficialAddress(85105, "Bratislava", "Jegeho", (byte) 12, client1);
         OfficialAddress officialAddress2 = new OfficialAddress(75757, "Senec", "Bratislavska", (byte) 16, client2);
         MailingAddress mailingAddress = new MailingAddress(82108, "Kosice", "Hlavna", (byte) 3, client2);
+
+        HomeContract homeContract1 = new HomeContract()
 
         clientRepository.save(client1);
         clientRepository.save(client2);

@@ -18,6 +18,10 @@ public class OfficialAddress extends Address {
     @JsonIgnore
     private Client client;
 
+    @OneToOne
+    @JsonIgnore
+    private HomeContract homeContract;
+
     public OfficialAddress() {
     }
 

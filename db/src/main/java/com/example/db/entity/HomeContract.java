@@ -18,7 +18,9 @@ public class HomeContract extends Contract {
     private Long id;
     private HomeType homeType;
     private int price;
-    //Address
+
+    @OneToOne
+    OfficialAddress officialAddress;
 
     @ManyToOne
     private Client client;
