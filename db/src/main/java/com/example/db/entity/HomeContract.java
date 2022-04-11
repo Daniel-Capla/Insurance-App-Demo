@@ -2,6 +2,7 @@ package com.example.db.entity;
 
 import com.example.db.parententity.Contract;
 import com.example.db.parententity.HomeType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -20,11 +21,16 @@ public class HomeContract extends Contract {
     private int price;
 
     @OneToOne
-    OfficialAddress officialAddress;
+    private OfficialAddress officialAddress;
 
     @ManyToOne
+    @JsonIgnore
     private Client client;
 
-
-
+    public HomeContract(HomeType homeType, int price, OfficialAddress officialAddress, Client client) {
+        this.homeType = homeType;
+        this.price = price;
+        this.officialAddress = officialAddress;
+        this.client = client;
+    }
 }
